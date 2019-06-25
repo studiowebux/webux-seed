@@ -74,4 +74,5 @@ const errored = () => {
 };
 
 module.exports = Promise.all([french(), english()]);
+// to test the error : 
 // module.exports = Promise.all([french(), english(), errored()]);

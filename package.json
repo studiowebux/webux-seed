@@ -1,7 +1,7 @@
 {
   "name": "webux-seed",
   "version": "1.0.0",
-  "description": "A module to manage the default values to be create",
+  "description": "A module to manage the default values to be create in the Database.",
   "main": "index.js",
   "directories": {
     "test": "tests"
@@ -11,6 +11,11 @@
   },
   "author": "Studio Webux S.E.N.C",
   "license": "SEE LICENSE IN license.txt",
+  "homepage": "https://github.com/studiowebux/webux-seed/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/studiowebux/webux-seed.git"
+  },
   "dependencies": {
     "fs": "0.0.1-security",
     "path": "^0.12.7"
