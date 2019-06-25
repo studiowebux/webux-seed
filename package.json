@@ -1,6 +1,6 @@
 {
   "name": "webux-seed",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A module to manage the default values to be create in the Database.",
   "main": "index.js",
   "directories": {
