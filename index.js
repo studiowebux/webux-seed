@@ -20,7 +20,7 @@ const path = require("path");
 /**
  * Create a sequence to process all the files within a given directory.
  * @param {Array} files The list of files to process, mandatory
- * @param {Function} callback 
+ * @param {Function} callback
  * @return {VoidFunction} The actual file to process.
  */
 async function eachFile(files, callback) {
@@ -37,7 +37,9 @@ async function eachFile(files, callback) {
 function LoadFiles(directory, log = console) {
   return new Promise(async (resolve, reject) => {
     try {
-      log.info("1. Getting all the default value files in " + directory + ".");
+      log.info(
+        "Webux-seed - Getting all the default value files in " + directory + "."
+      );
       const files = fs.readdirSync(directory).sort();
 
       if (!files) {
@@ -45,20 +47,22 @@ function LoadFiles(directory, log = console) {
       }
 
       await eachFile(files, async file => {
-        if (file.indexOf('.js') > 0) {
-          log.info("1.1. Processing file : " + file);
+        if (file.indexOf(".js") > 0) {
+          log.info("Webux-seed - Processing file : " + file);
           const processed = await require(path.join(directory, file));
 
           if (!processed) {
-            return reject(new Error("An error occur while processing : " + file));
+            return reject(
+              new Error("An error occur while processing : " + file)
+            );
           }
 
-          log.info("1.2. File " + file + " Loaded");
+          log.info(`File ${file} processed with success`);
         }
       });
 
-      log.info("2. All default values loaded from the directory.");
-      return resolve();
+      log.info("Webux-seed - All default values loaded from the directory.");
+      return resolve("All default values loaded from the directory");
     } catch (e) {
       return reject(e);
     }

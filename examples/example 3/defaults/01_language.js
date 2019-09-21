@@ -20,7 +20,7 @@ const french = () => {
   return new Promise((resolve, reject) => {
     // Simulate db creation
     setTimeout(() => {
-      console.log("Webux-seed - Language created !");
+      console.log("Language created !");
       return resolve('Default language "french" created.');
     }, 1000);
     // Language.create({
@@ -39,7 +39,7 @@ const french = () => {
 const english = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log("Webux-seed - Language created !");
+      console.log("Language created !");
       return resolve('Default language "english" created.');
     }, 1500);
     // Language.create({
@@ -58,7 +58,7 @@ const english = () => {
 const errored = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      return reject('Default language "english" not created.');
+      return reject(new Error('Default language "errored" not created.'));
     }, 500);
     // Language.create({
     //   defaultValue: false,
@@ -73,6 +73,6 @@ const errored = () => {
   });
 };
 
-module.exports = Promise.all([french(), english()]);
+module.exports = Promise.all([french(), english(), errored()]);
 // to test the error : 
 // module.exports = Promise.all([french(), english(), errored()]);
