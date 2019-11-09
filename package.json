@@ -1,5 +1,5 @@
 {
-  "name": "webux-seed",
+  "name": "@studiowebux/seed",
   "version": "1.1.1",
   "description": "A module to manage the default values to be create in the Database.",
   "main": "index.js",

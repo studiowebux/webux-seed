@@ -1,4 +1,4 @@
-# Webux-seed
+# @studiowebux/seed
 
 This module allows to load some default values in the app,
 You need to create a specific file for each resources you need.
@@ -6,7 +6,7 @@ You need to create a specific file for each resources you need.
 # Installation
 
 ```bash
-npm i --save webux-seed
+npm i --save @studiowebux/seed
 ```
 
 # Usage
@@ -71,7 +71,7 @@ index.js
 
 index.js  
 ```
-const webuxSeed = require("webux-seed");
+const webuxSeed = require("@studiowebux/seed");
 const path = require("path");
 
 webuxSeed(path.join(__dirname, "defaults"))
@@ -87,7 +87,7 @@ webuxSeed(path.join(__dirname, "defaults"))
 or  
 index.js  
 ```
-const webuxSeed = require("webux-seed");
+const webuxSeed = require("@studiowebux/seed");
 const path = require("path");
 
 async function loadApp() {
